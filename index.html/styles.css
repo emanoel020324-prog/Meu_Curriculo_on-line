@@ -1,0 +1,104 @@
+:root{
+  background-image: url(imagem/imagemfundo.jpg);
+  --card:#f7f4f4;
+  --accent:#0e0d0d;
+  --text:#030303;
+  --muted:#fbfbfc;
+  --maxw:1000px;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:20px;
+}
+
+.site-header {
+  background: linear-gradient(90deg, #43f8f2 0%, #1f29e9 100%);
+  border-bottom: 1px solid rgb(246, 246, 246);
+  
+  top: 0; 
+  z-index: 10;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.profile{display:flex;gap:16px;align-items:center}
+.profile-img{
+  width:84px;height:84px;border-radius:12px;object-fit:cover;border:2px solid rgba(17, 17, 17, 0.897)
+}
+.header-inner h1{margin:0;font-size:1.25rem}
+.tagline{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
+
+.top-nav a{
+  margin-left:14px;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+.top-nav a:hover{opacity:0.9}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  margin:18px 0;
+  box-shadow:0 6px 18px rgb(244, 244, 244);
+}
+.card h2{margin-top:0}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.project-card{padding:12px;border-radius:10px;background:#e7e2e2;border:1px solid rgb(10, 9, 9)}
+
+.skills{display:inline-table;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.skills li{background:#cdc8c8;padding:8px 10px;border-radius:8px;font-weight:600;color:var(--accent)}
+
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+
+@media (max-width:800px){
+  .projects-grid{grid-template-columns:1fr}
+  .top-nav{display:none}
+  .profile-img{width:64px;height:64px}
+}
+
+.site-footer .social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.site-footer .social-links a {
+  color: #fff; 
+  font-size: 1.6rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.site-footer .social-links a:hover {
+  transform: scale(1.2);
+}
+
+.site-footer .social-links a[aria-label="Instagram"]:hover {
+  color: #cc0328; /* cor oficial do Instagram */
+}
+
+.site-footer .social-links a[aria-label="WhatsApp"]:hover {
+  color: #13de5d; /* cor oficial do WhatsApp */
+}
+
